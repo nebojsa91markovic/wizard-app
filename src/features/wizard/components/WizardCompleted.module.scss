@@ -1,0 +1,18 @@
+@use "@/styles/_variables" as *;
+
+.wizard-completed {
+  padding: $spacer * 20 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  > h2 {
+    margin-bottom: $spacer * 8;
+  }
+}
+
+.success-icon {
+  margin-bottom: $spacer * 4;
+}

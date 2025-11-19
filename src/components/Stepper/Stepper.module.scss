@@ -1,0 +1,53 @@
+@use "@/styles/_variables" as *;
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8 * $spacer;
+  flex: 1;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .circle {
+    width: 8 * $spacer;
+    height: 8 * $spacer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    background-color: $disabled-color;
+    color: $white-color;
+  }
+
+  .label {
+    text-align: center;
+  }
+}
+
+.finished .circle {
+  background-color: $success-color;
+}
+
+.current .circle {
+  background-color: $primary-color;
+}
+
+.future .circle {
+  background-color: $disabled-color;
+}
+
+.line {
+  height: 2px;
+  background-color: $disabled-color;
+  flex-grow: 1;
+  margin-left: $spacer * 2;
+  margin-right: $spacer * 2;
+  margin-top: $spacer * 4;
+}

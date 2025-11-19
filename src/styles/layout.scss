@@ -1,0 +1,15 @@
+@use "./variables" as vars;
+
+.main-container {
+  max-width: vars.$max-main-width;
+  margin: 0 auto;
+  padding: vars.$spacer * 4;
+
+  @media (max-width: 768px) {
+    padding: vars.$spacer * 3;
+  }
+
+  @media (max-width: 480px) {
+    padding: vars.$spacer * 2;
+  }
+}

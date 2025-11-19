@@ -1,0 +1,53 @@
+@use "./variables" as vars;
+
+@for $i from 0 through 10 {
+  $value: $i * vars.$spacer;
+
+  .ma-#{$i} {
+    margin: $value !important;
+  }
+  .mt-#{$i} {
+    margin-top: $value !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $value !important;
+  }
+  .ml-#{$i} {
+    margin-left: $value !important;
+  }
+  .mr-#{$i} {
+    margin-right: $value !important;
+  }
+  .mx-#{$i} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+  .my-#{$i} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+
+  .pa-#{$i} {
+    padding: $value !important;
+  }
+  .pt-#{$i} {
+    padding-top: $value !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $value !important;
+  }
+  .pl-#{$i} {
+    padding-left: $value !important;
+  }
+  .pr-#{$i} {
+    padding-right: $value !important;
+  }
+  .px-#{$i} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+  .py-#{$i} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}

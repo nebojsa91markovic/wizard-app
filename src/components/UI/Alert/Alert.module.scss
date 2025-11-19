@@ -1,0 +1,26 @@
+@use "@/styles/_variables" as *;
+
+.alert {
+  position: fixed;
+  bottom: $spacer * 8;
+
+  z-index: 9999;
+  padding: $spacer * 3 $spacer * 4;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacer * 4;
+
+  @media (min-width: 768px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.error {
+  background-color: $white-color;
+  color: $error-color;
+}
+
+.success {
+  background-color: $white-color;
+  color: $success-color;
+}

@@ -1,0 +1,10 @@
+@use "@/styles/_variables" as *;
+
+.wizard-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color-root;
+  border-radius: $border-radius-lg;
+  padding: 5 * $spacer;
+  text-align: start;
+}

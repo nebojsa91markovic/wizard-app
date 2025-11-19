@@ -1,0 +1,42 @@
+@use "./variables" as vars;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-base;
+  background-color: vars.$background-color;
+  color: vars.$text-color;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid vars.$border-color-root;
+  border-radius: vars.$border-radius-sm;
+  padding: vars.$spacing-sm vars.$spacing-md;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: vars.$font-weight-semibold;
+}
+
+:focus-visible:not(input),
+:-webkit-any-link:focus-visible:not(input) {
+  outline: 2px solid vars.$secondary-color !important;
+  outline-offset: 2px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.w-full {
+  width: 100% !important;
+}

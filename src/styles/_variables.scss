@@ -1,0 +1,32 @@
+$spacer: 0.25rem;
+
+$border-color-root: #717171;
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$error-color: #dc3545;
+$white-color: #fff;
+$background-color: #f8f9fa;
+$text-color: #212529;
+$disabled-color: #ccc;
+
+$font-family-base: "Roboto", sans-serif;
+$font-size-base: 1rem;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$spacing-xs: $spacer;
+$spacing-sm: $spacer * 2;
+$spacing-md: $spacer * 4;
+$spacing-lg: $spacer * 6;
+$spacing-xl: $spacer * 8;
+
+$border-radius-sm: $spacer;
+$border-radius-md: $spacer * 2;
+$border-radius-lg: $spacer * 3;
+
+$max-main-width: 1200px;

@@ -1,0 +1,7 @@
+@use "@/styles/_variables" as *;
+
+.wizard-navigation {
+  width: 100%;
+  margin-top: $spacer * 6;
+  text-align: right;
+}

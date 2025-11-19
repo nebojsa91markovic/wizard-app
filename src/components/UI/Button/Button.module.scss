@@ -1,0 +1,42 @@
+@use "@/styles/_variables" as *;
+
+.button {
+  padding: $spacer * 2 $spacer * 4;
+  border: 1px solid $border-color-root;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  font-weight: $font-weight-semibold;
+  background-color: transparent;
+
+  &.active {
+    box-shadow: 0 0 0 2px $primary-color inset;
+  }
+
+  &.primary {
+    background-color: inherit;
+    color: inherit;
+
+    &:hover:not(:disabled),
+    &.active,
+    &.focus-visible {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  &.secondary {
+    background-color: $primary-color;
+    color: $white-color;
+
+    &:hover:not(:disabled),
+    &.active,
+    &.focus-visible {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
+  &:disabled {
+    color: $disabled-color;
+  }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { useAppDispatch, useAppSelector } from "@/hooks";
-import { clearStepData, updateStepData, type UserInfo } from "../../model";
+import { updateStepData, type UserInfo } from "../../model";
 
 import styles from "./WizardStep.module.scss";
 import type { WizardStepProps } from "../../types";

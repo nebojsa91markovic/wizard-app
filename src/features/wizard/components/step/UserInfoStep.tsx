@@ -62,12 +62,6 @@ const WizardStepInformation = ({ onValidate, stepId }: WizardStepProps) => {
     onValidate(isValid);
   }, [isValid, onValidate]);
 
-  useEffect(() => {
-    return () => {
-      dispatch(clearStepData(stepId));
-    };
-  }, []);
-
   return (
     <form noValidate>
       {filteredFields.map((field) => {

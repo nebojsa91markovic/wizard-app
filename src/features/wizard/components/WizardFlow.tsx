@@ -27,9 +27,9 @@ const WizardFlow = () => {
   );
 
   const [isStepValid, setIsStepValid] = useState(false);
-  const activeStep = steps[currentStepIndex];
+  const currentStep = steps[currentStepIndex];
 
-  const isFinalForm = activeStep.id === "userInfo";
+  const isFinalForm = currentStep.id === "userInfo";
 
   const handleValidate: ValidateCallback = useCallback((valid) => {
     setIsStepValid(valid);
@@ -40,9 +40,7 @@ const WizardFlow = () => {
   };
 
   const handleStepNavigation = () => {
-    const activeStep = steps[currentStepIndex];
-
-    if (activeStep.id === "planChoose") {
+    if (currentStep.id === "planChoose") {
       if (data.plan?.isNewPlan) {
         dispatch(
           setSteps([
@@ -67,15 +65,14 @@ const WizardFlow = () => {
   };
 
   const handlePrev = () => {
-    const prevIndex = currentStepIndex - 1;
-    const prevStepId = steps[prevIndex].id;
+    const previousStepIndex = currentStepIndex - 1;
+    const previousStep = steps[previousStepIndex];
 
-    if (steps[prevIndex].id !== "addNewPlan")
-      dispatch(clearStepData(steps[prevIndex].stepId));
+    if (currentStep.id !== "addNewPlan")
+      dispatch(clearStepData(currentStep.stepId));
 
-    if (prevStepId === "planChoose") {
-      dispatch(setSteps([...defaultInitialSteps]));
-    }
+    dispatch(clearStepData(previousStep.stepId));
+
     dispatch(prevStep());
   };
 
@@ -91,8 +88,8 @@ const WizardFlow = () => {
 
   const showDummyStep = steps.length < 3;
 
-  const ActiveStepComponent = StepComponents[activeStep.id];
-  if (!ActiveStepComponent) return null;
+  const CurrentStepComponent = StepComponents[currentStep.id];
+  if (!CurrentStepComponent) return null;
 
   return (
     <>
@@ -118,9 +115,9 @@ const WizardFlow = () => {
         )}
       </div>
 
-      <ActiveStepComponent
+      <CurrentStepComponent
         onValidate={handleValidate}
-        stepId={activeStep.stepId}
+        stepId={currentStep.stepId}
       />
       <WizardNavigation
         disablePrev={currentStepIndex === 0}

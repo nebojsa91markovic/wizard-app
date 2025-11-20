@@ -3,5 +3,13 @@
 .wizard-navigation {
   width: 100%;
   margin-top: $spacer * 6;
-  text-align: right;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 768px) {
+    text-align: right;
+  }
 }
